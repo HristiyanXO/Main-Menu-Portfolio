@@ -1,17 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Rotation : MonoBehaviour
 {
-    // public GameObject rightArrow = GameObject.FindWithTag ("rightArrow");
+    public Button rightArrow;
 
+    Rotate rotateScript;
 
-    void OnClick(){
-        Debug.Log("Logging Message to Console");
-        Debug.Log("A");
+    float speedY = 50;
 
-        // rightArrow.SpecialFunction()
+    void Start(){
+        rotateScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Rotate>();
+
+        Button btn = rightArrow.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);
+    }
+
+   
+    public void RotateRight(){
+        
+        rotateScript.Right(speedY);
+          
+    }
+    public void RotateLeft(){
+        rotateScript.Left(speedY);
+        
+    }
+ void TaskOnClick(){
+        Debug.Log("Testvam Brat");
+    }
+
+    public void Update(){
+       
+       if (Input.GetKey(KeyCode.RightArrow)){
+            rotateScript.Right();
+
+       }
+        if (Input.GetKey(KeyCode.LeftArrow)){
+            rotateScript.Left();
+
+       }
     }
 
 }
