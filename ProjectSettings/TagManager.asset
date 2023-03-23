@@ -6,6 +6,7 @@ TagManager:
   tags:
   - rightArrow
   - Gosho
+  - Slider
   layers:
   - Default
   - TransparentFX
