@@ -12,7 +12,7 @@ public class Rotation : MonoBehaviour
     float speedY = 50;
 
     void Start(){
-        rotateScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Rotate>();
+        rotateScript = GameObject.FindGameObjectWithTag("Gosho").GetComponent<Rotate>();
 
         Button btn = rightArrow.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
