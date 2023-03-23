@@ -1348,3 +1348,134 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2849.921443 seconds.
+  path: Assets/Scenes/Game Empthy Object.prefab
+  artifactKey: Guid(4f9944f5ceff4b346a00389353f63a85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Game Empthy Object.prefab using Guid(4f9944f5ceff4b346a00389353f63a85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.930855 seconds  code(4) message(Build asset version error: assets/scenes/game empthy object.prefab in SourceAssetDB has modification time of '2023-03-23T18:06:36.2973861Z' while content on disk has modification time of '0001-01-01T00:00:00Z' with error code 2
+Stacktrace:
+0x00007ff62b25defc (Unity) StackWalker::GetCurrentCallstack
+0x00007ff62b2654f9 (Unity) StackWalker::ShowCallstack
+0x00007ff62bfff28c (Unity) GetStacktrace
+0x00007ff62c152647 (Unity) GetAssetHashAndValidate
+0x00007ff62c14d89e (Unity) AssetVersionBuilder::BuildHashOfSourceAssetArray
+0x00007ff62c14b6d4 (Unity) AssetVersionBuilder::BuildAssetVersion
+0x00007ff62c1260dd (Unity) CreateAssetVersionBuilder
+0x00007ff62c12cb05 (Unity) ImportToObjects
+0x00007ff62c12b8a8 (Unity) ImportAsset
+0x00007ff62c0c46b8 (Unity) AssetImportWorker::Import
+0x00007ff62c0e9e8c (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff62c179bf2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff62c165a92 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff62c1679a4 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff62c177f2f (Unity) IOService::Run
+0x00007ff62c113bfb (Unity) RunAssetImportWorkerClientV2
+0x00007ff62c113c50 (Unity) RunAssetImporterV2
+0x00007ff62bb86bd8 (Unity) Application::InitializeProject
+0x00007ff62c009612 (Unity) WinMain
+0x00007ff62d6d765e (Unity) __scrt_common_main_seh
+0x00007ff803367614 (KERNEL32) BaseThreadInitThunk
+0x00007ff8052426a1 (ntdll) RtlUserThreadStart
+)
+  ERROR: Build asset version error: assets/scenes/game empthy object.prefab in SourceAssetDB has modification time of '2023-03-23T18:06:36.2973861Z' while content on disk has modification time of '0001-01-01T00:00:00Z' with error code 2
+Stacktrace:
+0x00007ff62b25defc (Unity) StackWalker::GetCurrentCallstack
+0x00007ff62b2654f9 (Unity) StackWalker::ShowCallstack
+0x00007ff62bfff28c (Unity) GetStacktrace
+0x00007ff62c152647 (Unity) GetAssetHashAndValidate
+0x00007ff62c14d89e (Unity) AssetVersionBuilder::BuildHashOfSourceAssetArray
+0x00007ff62c14b6d4 (Unity) AssetVersionBuilder::BuildAssetVersion
+0x00007ff62c1260dd (Unity) CreateAssetVersionBuilder
+0x00007ff62c12cb05 (Unity) ImportToObjects
+0x00007ff62c12b8a8 (Unity) ImportAsset
+0x00007ff62c0c46b8 (Unity) AssetImportWorker::Import
+0x00007ff62c0e9e8c (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff62c179bf2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff62c165a92 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff62c1679a4 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff62c177f2f (Unity) IOService::Run
+0x00007ff62c113bfb (Unity) RunAssetImportWorkerClientV2
+0x00007ff62c113c50 (Unity) RunAssetImporterV2
+0x00007ff62bb86bd8 (Unity) Application::InitializeProject
+0x00007ff62c009612 (Unity) WinMain
+0x00007ff62d6d765e (Unity) __scrt_common_main_seh
+0x00007ff803367614 (KERNEL32) BaseThreadInitThunk
+0x00007ff8052426a1 (ntdll) RtlUserThreadStart
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.693939 seconds.
+  path: Assets/Scenes/Game 1.unity
+  artifactKey: Guid(a857b440b20e1834da76d4f90a1791ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Game 1.unity using Guid(a857b440b20e1834da76d4f90a1791ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000503 seconds  code(4) message(Build asset version error: assets/scenes/game 1.unity in SourceAssetDB has modification time of '2023-03-23T18:06:36.2804473Z' while content on disk has modification time of '2023-03-23T18:10:33.4415582Z')
+  ERROR: Build asset version error: assets/scenes/game 1.unity in SourceAssetDB has modification time of '2023-03-23T18:06:36.2804473Z' while content on disk has modification time of '2023-03-23T18:10:33.4415582Z'
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004207 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.261 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1262ms)
+		BeginReloadAssembly (127ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (1059ms)
+			LoadAssemblies (110ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (350ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (446ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (102ms)
+				ProcessInitializeOnLoadAttributes (310ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1710 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.8 MB.
+System memory in use after: 98.9 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2274.
+Total: 3.391500 ms (FindLiveObjects: 0.171200 ms CreateObjectMapping: 0.056800 ms MarkObjects: 3.067800 ms  DeleteObjects: 0.094700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  requireTextureImportCompression: false -> true
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 69.014081 seconds.
+  path: Assets/Scripts/SceneChanger.cs
+  artifactKey: Guid(a7642d5ae914fce4492f4d0884bdc01e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SceneChanger.cs using Guid(a7642d5ae914fce4492f4d0884bdc01e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b528d6752b2793e40487e67e2b406e24') in 0.010436 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.692955 seconds.
+  path: Assets/Scripts/LevelManager.cs
+  artifactKey: Guid(45d781f4449ff604293da2da2a1aac3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LevelManager.cs using Guid(45d781f4449ff604293da2da2a1aac3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0db0de37c68b15c0ce792b4ce31604ce') in 0.010467 seconds 
