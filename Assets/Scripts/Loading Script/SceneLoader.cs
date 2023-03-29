@@ -9,15 +9,17 @@ public class SceneLoader : MonoBehaviour
     public Slider progressSlider;
 
 
- public void Start()
-    {
-        StartCoroutine(LoadScene_Coroutine(2));
-    }
+//  public void Start()
+//     {
+//         StartCoroutine(LoadScene_Coroutine(2));
+//     }
     
-    // public void LoadScene(int index)
-    // {
-    //     StartCoroutine(LoadScene_Coroutine(index));
-    // }
+    public void LoadScene(int index)
+    {
+        var test = SceneManager.LoadSceneAsync(1);
+        Debug.Log(test);
+        StartCoroutine(LoadScene_Coroutine(index));
+    }
  
     public IEnumerator LoadScene_Coroutine(int index)
     {
@@ -25,7 +27,7 @@ public class SceneLoader : MonoBehaviour
         progressSlider.value = 0;
         LoaderUI.SetActive(true);
  
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(2);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(index);
         asyncOperation.allowSceneActivation = false;
         float progress = 0;
  

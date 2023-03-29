@@ -10,7 +10,10 @@ public class SceneChanger : MonoBehaviour
  
     public void LoadScene(int index)
     {
-        StartCoroutine(LoadScene_Coroutine(index));
+
+SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadSceneAsync(1);
+        // StartCoroutine(LoadScene_Coroutine(index));
     }
  
     public IEnumerator LoadScene_Coroutine(int index)
@@ -18,7 +21,7 @@ public class SceneChanger : MonoBehaviour
         progressSlider.value = 0;
         LoaderUI.SetActive(true);
  
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(1);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(index);
         asyncOperation.allowSceneActivation = false;
         float progress = 0;
  
