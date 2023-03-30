@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 520659091}
   m_Layer: 5
   m_Name: SceneLoaderCanvas
-  m_TagString: Untagged
+  m_TagString: Slider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 520659090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9ac252e6061a474a8905a2bb37d6ebd, type: 3}
+  m_Script: {fileID: 11500000, guid: 497d5ed197da52b4a827c752a3490ea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   LoaderUI: {fileID: 1411621642}

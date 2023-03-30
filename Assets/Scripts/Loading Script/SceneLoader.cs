@@ -1,46 +1,19 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
- 
+ using System.Threading.Tasks; 
+
 public class SceneLoader : MonoBehaviour
 {
-    public GameObject LoaderUI;
-    public Slider progressSlider;
+    public static int sceneVal;
 
-
-//  public void Start()
-//     {
-//         StartCoroutine(LoadScene_Coroutine(2));
-//     }
-    
-    public void LoadScene(int index)
+     public void LoadScene(int index)
     {
-        var test = SceneManager.LoadSceneAsync(1);
-        Debug.Log(test);
-        StartCoroutine(LoadScene_Coroutine(index));
+        sceneVal = index;
+        
+         SceneManager.LoadSceneAsync(1);
     }
- 
-    public IEnumerator LoadScene_Coroutine(int index)
-    {
 
-        progressSlider.value = 0;
-        LoaderUI.SetActive(true);
  
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(index);
-        asyncOperation.allowSceneActivation = false;
-        float progress = 0;
  
-        while (!asyncOperation.isDone)
-        {
-            progress = Mathf.MoveTowards(progress, asyncOperation.progress, Time.deltaTime);
-            progressSlider.value = progress;
-            if (progress >= 0.9f)
-            {
-                progressSlider.value = 1;
-                asyncOperation.allowSceneActivation = true;
-            }
-            yield return null;
-        }
-    }
 }
