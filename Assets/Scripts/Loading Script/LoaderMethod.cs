@@ -9,7 +9,6 @@ public class LoaderMethod : MonoBehaviour
     public Slider progressSlider;
     
    void Start(){
-    Debug.Log(SceneLoader.sceneVal);
       StartCoroutine(LoadScene_Coroutine(SceneLoader.sceneVal));
 
    }
