@@ -10,7 +10,6 @@ public class SceneLoader : MonoBehaviour
      public void LoadScene(int index)
     {
         sceneVal = index;
-        
          SceneManager.LoadSceneAsync(1);
     }
 

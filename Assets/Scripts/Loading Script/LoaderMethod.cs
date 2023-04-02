@@ -14,6 +14,7 @@ public class LoaderMethod : MonoBehaviour
    }
    public IEnumerator LoadScene_Coroutine(int index)
     {
+        Debug.Log(index);
         progressSlider.value = 0;
         LoaderUI.SetActive(true);
  
