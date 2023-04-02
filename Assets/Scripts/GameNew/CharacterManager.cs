@@ -9,10 +9,12 @@ public class CharacterManager : MonoBehaviour
 
     public GameObject selectedCharacter;
     public Text nameText;
-    
     private int selectedOption = 0;
+    private float healthBar = 100;
+    public bool isRange;
+    public bool isPlayScene = false;
     private Transform position;
-    private GameObject newCharacter;
+    private GameObject newCharacter;  
 
     void Start()
     {
@@ -22,6 +24,7 @@ public class CharacterManager : MonoBehaviour
 
   public void UpdateCharacter(int index)
   {
+
       selectedOption = index;
 
       Character character = characterDB.GetCharacter(selectedOption);
@@ -29,7 +32,11 @@ public class CharacterManager : MonoBehaviour
 
       // nameText.text = character.characterName;
 
-      newCharacter = Instantiate(character.characterAndEnvironment);
+    var typeChar = character.characterAndEnvironment;
+    if(isPlayScene) typeChar = character.character;
+    
+    newCharacter = Instantiate(typeChar);
+
 
       Destroy(selectedCharacter);
       selectedCharacter = newCharacter;
