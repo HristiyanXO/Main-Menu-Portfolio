@@ -8,4 +8,6 @@ public class Character
     public string characterName;
     public GameObject character;
     public GameObject characterAndEnvironment;
+
+    public GameObject skill;
 }
