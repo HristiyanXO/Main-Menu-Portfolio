@@ -5,32 +5,13 @@ using UnityEngine.UI;
 
 public class Rotation : MonoBehaviour
 {
-    public Button rightArrow;
 
     Rotate rotateScript;
 
     float speedY = 50;
 
-    void Start(){
-        rotateScript = GameObject.FindGameObjectWithTag("Gosho").GetComponent<Rotate>();
-
-        Button btn = rightArrow.GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
-    }
-
    
-    public void RotateRight(){
-        
-        rotateScript.Right(speedY);
-          
-    }
-    public void RotateLeft(){
-        rotateScript.Left(speedY);
-        
-    }
- void TaskOnClick(){
-        Debug.Log("Testvam Brat");
-    }
+   
 
     public void Update(){
        
