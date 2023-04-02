@@ -8,6 +8,7 @@ public class CharacterManager : MonoBehaviour
     public CharacterDatabase characterDB;
 
     public GameObject selectedCharacter;
+    public GameObject currentChar;
     public Text nameText;
     private int selectedOption = 0;
     private float healthBar = 100;
@@ -15,13 +16,27 @@ public class CharacterManager : MonoBehaviour
     public bool isPlayScene = false;
     private Transform position;
     private GameObject newCharacter;  
+      private GameObject playerCamera;
 
     void Start()
     {
-
       UpdateCharacter(selectedOption);
     }
+  public void Update(){
+    Character character = characterDB.GetCharacter(selectedOption);
+      
+      playerCamera =  GameObject.FindGameObjectWithTag("Camera");
 
+     if (Input.GetMouseButtonDown(0))
+         {
+          Vector3 position = playerCamera.transform.position;
+          position.x += 5;
+          position.y -= 2;
+          Debug.Log(position);
+          Instantiate(character.skill, position, selectedCharacter.transform.rotation);
+
+         }
+  }
   public void UpdateCharacter(int index)
   {
 
@@ -34,7 +49,7 @@ public class CharacterManager : MonoBehaviour
 
     var typeChar = character.characterAndEnvironment;
     if(isPlayScene) typeChar = character.character;
-    
+
     newCharacter = Instantiate(typeChar);
 
 
@@ -47,7 +62,11 @@ public class CharacterManager : MonoBehaviour
 
 
   }
+  
+  public void Attack(){
 
+  }
+  
 }
 
 

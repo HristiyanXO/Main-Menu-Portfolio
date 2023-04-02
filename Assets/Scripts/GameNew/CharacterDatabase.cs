@@ -15,7 +15,7 @@ public class CharacterDatabase : ScriptableObject
             return character.Length;
         }
     }
-
+    
     public Character GetCharacter(int index){
         charIndex = index;
         return character[index];
